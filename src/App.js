@@ -1,6 +1,7 @@
 import Sidebar from "./pages/global/Sidebar";
 import Topbar from "./pages/global/Topbar";
 
+
 function App() {
   return (
     <div className="App flex h-screen bg-gray-200">

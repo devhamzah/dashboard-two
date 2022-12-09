@@ -3,7 +3,7 @@ import { BsPerson } from "react-icons/bs";
 import { AiOutlineSetting } from "react-icons/ai";
 import { BsBell } from "react-icons/bs";
 import Dropdown from "../../components/Dropdown";
-import { menuItems } from "../../data";
+import { listItems } from "../../data";
 import { useEffect, useRef, useState } from "react";
 const Topbar = () => {
   const [isListOpen, setIsListOpen] = useState(false);
@@ -16,7 +16,7 @@ const Topbar = () => {
     if (!refOne.current.contains(e.target)) {
       setIsListOpen(false);
     } else {
-      console.log("click inside");
+      console.log("console out side checked");
     }
   };
 
@@ -38,11 +38,15 @@ const Topbar = () => {
         <div className="flex text-xl">
           <div
             ref={refOne}
-            onClick={() => setIsListOpen(!isListOpen)} 
-            className={`${isListOpen ? "bg-white" : ""} relative transition rounded-full mx-2 cursor-pointer hover:bg-white p-2`}
+            onClick={() => {
+              setIsListOpen(!isListOpen);
+            }}
+            className={`${
+              isListOpen ? "bg-white" : ""
+            } relative transition rounded-full mx-2 cursor-pointer hover:bg-white p-2`}
           >
-            <AiOutlineSetting/>
-            <Dropdown menuItems={menuItems} isOpen={isListOpen} />
+            <AiOutlineSetting />
+            <Dropdown listItems={listItems} isOpen={isListOpen} />
           </div>
           <div className="transition rounded-full mx-2 cursor-pointer hover:bg-white p-2">
             <BsBell />
