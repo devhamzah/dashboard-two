@@ -11,18 +11,21 @@ const sidebarSlice = createSlice({
   name: "sidebar",
   initialState,
   reducers: {
-    toggleMenuItem: (state,{payload})=>{
-      state.menuItems = state.menuItems.map((item)=>{
-          if(item.title === payload){
-            item.state = !item.state;
-          }else{
-            item.state = false;
-          }
-          return item;
+    toggleMenuItem: (state, { payload }) => {
+      state.menuItems = state.menuItems.map((item) => {
+        if (item.title === payload) {
+          item.state = !item.state;
+        } else {
+          item.state = false;
+        }
+        return item;
       });
     },
+    toggleSidebar:(state,{payload})=>{
+       state.isSidebarOpen =  payload;
+    }
   },
 });
 
 export default sidebarSlice.reducer;
-export const { toggleMenuItem } = sidebarSlice.actions;
+export const { toggleMenuItem ,toggleSidebar } = sidebarSlice.actions;

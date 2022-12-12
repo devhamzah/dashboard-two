@@ -1,17 +1,21 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Menuitem from "../../components/Menuitem";
-
-
+import {AiOutlineCloseCircle} from "react-icons/ai";
+import { toggleSidebar } from "../../redux/features/sidebarSlice";
 
 const Sidebar = () => {
-  const {menuItems} = useSelector((store)=>store.sidebar);
-  console.log(menuItems);
+  const dispatch = useDispatch();
+  const {menuItems,isSidebarOpen} = useSelector((store)=>store.sidebar);
   return (
     <div
-      className={`transition fixed w-64 h-screen -translate-x-64 lg:transform-none lg:relative bg-gray-800`}
+      className={`transition delay-400 ease-in-out scrollbar overflow-hidden overflow-y-auto fixed w-64 h-screen ${isSidebarOpen ? "" :"-translate-x-64"} lg:transform-none lg:relative bg-gray-800`}
     >
+      {/* CLOSE MENU FOR SMALL DEVICES */}
+      <div className="text-3xl text-white w-60 lg:hidden ">
+        <AiOutlineCloseCircle onClick={()=>dispatch(toggleSidebar(false))} className="cursor-pointer ml-auto mt-2"/>
+      </div>
       {/* USER PROFILE */}
-      <div className={`w-48 mx-auto my-10`}>
+      <div className={`w-48 mx-auto lg:mt-10 mb-10`}>
         <div className="flex flex-col items-center">
           <img className="rounded-full w-28 h-28" src="./userImage.png" alt="" />
           <h1 className="text-gray-300 text-xl">Hamza Ali</h1>
