@@ -2,7 +2,7 @@ import { AiFillFacebook, AiOutlineGoogle } from "react-icons/ai";
 
 const Register = () => {
   return (
-    <div className="flex items-center justify-center mt-10 mb-10">
+    <div className="flex items-center justify-center mt-5 mb-10">
       <div className=" lg:w-5/12 w-9/12 md:w-7/12 shadow-[0_2px_8px_0px_rgba(99,99,99,0.3)]">
         <div className="p-5 rounded-t-md bg-gray-700 text-gray-300 font-bold">
           <h1 className="text-3xl">Register</h1>
@@ -23,7 +23,7 @@ const Register = () => {
                 </div>
               </button>
             </div>
-            <div className="flex items-center justify-center w-full my-4">
+            <div className="flex items-center justify-center w-full my-2">
               <hr className="w-full border" />
               <h1 className="text-xl px-5 text-gray-400">Or</h1>
               <hr className="w-full border" />

@@ -2,14 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background:transparent;
-  margin-right: 2px;
+  
+  margin-top: 48px;
+  background: rgba(0, 0, 0, 0);
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -28,4 +30,8 @@
 }
 .svg-circle-text{
   text-anchor: middle;
+}
+
+.test{
+  overflow: overlay;
 }

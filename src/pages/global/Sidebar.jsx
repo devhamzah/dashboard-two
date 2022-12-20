@@ -27,7 +27,7 @@ const Sidebar = () => {
       {/* MENU ITEMS */}
       <div className={`w-48 mx-auto`}>
         {menuItems.map((item,index)=>{
-            return <Menuitem state={item.state} title={item.title} links={item.links} icon={item.icon} key={index} />
+            return <Menuitem  state={item.state} title={item.title} links={item.links} icon={item.icon} key={index} />
         })}
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { BsChevronDown } from "react-icons/bs";
 import { useDispatch } from "react-redux";
-import { toggleMenuItem } from "../redux/features/sidebarSlice";
+import { toggleMenuItem,toggleSidebar } from "../redux/features/sidebarSlice";
 import { NavLink } from "react-router-dom";
 
 const Menuitem = ({ links, icon, title, state }) => {
@@ -32,7 +32,7 @@ const Menuitem = ({ links, icon, title, state }) => {
         {/* MENU INNER LINKS */}
         {links.map((item, index) => {
           return (
-            <NavLink to={item.toLowerCase()} key={index}>
+            <NavLink onClick={()=> dispatch(toggleSidebar(false))} to={item.toLowerCase()} key={index}>
               <p className=" my-3">
                 {item}
               </p>
