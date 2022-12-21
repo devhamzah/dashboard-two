@@ -27,18 +27,18 @@ function App() {
       {/* SIDE BAR */}
       <Sidebar />
       {/* CONTENT CONTAINER */}
-      <div className="content flex-grow overflow-hidden scrollbar overflow-y-auto">
+      <div className="content w-full overflow-hidden scrollbar overflow-y-auto">
         {/* TOPBAR */}
         <Topbar />
         {/* CONTENT */}
         <div>
           <Routes>
             <Route
-              path="/"
+              path="/classic"
               element={
-                <div>
-                  <DataTable rows={peoples} title="Contacts" columns={columns} />
-                </div>
+                
+                  <DataTable rows={peoples} title="Under Dev" columns={columns} />
+               
               }
             />
             <Route path="/login" element={<Login />} />

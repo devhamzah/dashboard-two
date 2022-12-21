@@ -8,7 +8,7 @@ const Sidebar = () => {
   const {menuItems,isSidebarOpen} = useSelector((store)=>store.sidebar);
   return (
     <div
-      className={`transition delay-400 ease-in-out scrollbar overflow-hidden overflow-y-auto fixed w-64 h-screen ${isSidebarOpen ? "" :"-translate-x-64"} lg:transform-none lg:relative bg-gray-800`}
+      className={`z-50 transition delay-400 ease-in-out scrollbar overflow-hidden overflow-y-auto fixed w-72 h-screen ${isSidebarOpen ? "" :"-translate-x-72"} lg:transform-none lg:relative bg-gray-800`}
     >
       {/* CLOSE MENU FOR SMALL DEVICES */}
       <div className="text-3xl text-white w-60 lg:hidden ">
