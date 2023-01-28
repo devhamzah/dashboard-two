@@ -39,7 +39,7 @@ const Topbar = () => {
           </div>
         </div>
         {/* ICON CONTAINER */}
-        <div className="flex text-xl">
+        <div className="flex text-xl mr-4">
           <div
             ref={refOne}
             onClick={() => {

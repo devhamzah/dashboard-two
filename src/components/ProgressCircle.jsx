@@ -27,8 +27,8 @@ const ProgressCircle = ({
 
 
   return (
-    <div>
-      <svg className="   mx-auto mt-20 " width={size} height={size}>
+    <div className="my-auto">
+      <svg className="mx-auto" width={size} height={size}>
         <circle
           className="svg-circle-bg fill-none"
           stroke={circleOneStroke}
@@ -50,7 +50,7 @@ const ProgressCircle = ({
         ></circle>
         <text
           className="svg-circle-text font-bold"
-          style={{ fontSize: `${textSize}` }}
+          style={{ fontSize: `${textSize}`, fill:"#fff"}}
           x={`${center}`}
           y={`${center + 6}`}
         >

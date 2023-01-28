@@ -11,6 +11,7 @@ import Contacts from "./pages/contacts";
 // testing
 import DataTable from "./components/DataTable";
 import peoples from "./peopleContacts.json";
+import Minimal from "./pages/minimal/minimal";
 
 const columns = [
   { title: "ID", id: "_id" ,minWidth:240},
@@ -37,10 +38,11 @@ function App() {
               path="/classic"
               element={
                 
-                  <DataTable rows={peoples} title="Under Dev" columns={columns} />
+                  <DataTable rows={peoples} title="Under Development" columns={columns} />
                
               }
             />
+            <Route path="/minimal" element={<Minimal/>} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/forgot Password" element={<ForgotPassword />} />
